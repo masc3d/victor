@@ -71,9 +71,6 @@ class VictorPlugin implements Plugin<Project> {
                     baseDpi = project.victor.svgDpi
                     generateVectorDrawables = project.victor.generateVectorDrawables
                 }
-
-                // Makes the magic happen (inserts resources so devs can use it)
-                variant.registerResGeneratingTask(conversionTask, conversionTask.outputDir)
             }
         }
     }
