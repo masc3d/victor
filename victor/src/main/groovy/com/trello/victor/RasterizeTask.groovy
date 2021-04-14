@@ -16,7 +16,7 @@
 
 package com.trello.victor
 
-import org.gradle.api.tasks.Internal
+
 import javax.annotation.Nullable
 import com.romainpiel.svgtoandroid.Svg2Vector
 import org.gradle.api.DefaultTask
@@ -45,7 +45,7 @@ class RasterizeTask extends DefaultTask {
     @OutputDirectory
     File outputDir
 
-    @Internal
+    @Input
     /**
      * The densities to scale assets for.
      */
