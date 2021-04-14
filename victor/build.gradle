@@ -15,14 +15,13 @@
  */
 
 plugins {
-    id 'nu.studer.plugindev' version '1.0.6'
+    id 'nu.studer.plugindev' version '2.0'
 
     // Should come along with plugindev, but plugindev uses an old version
     id 'com.jfrog.bintray' version '1.6'
 }
 
 apply plugin: 'groovy'
-apply plugin: 'java-gradle-plugin'
 
 dependencies {
     implementation gradleApi()
@@ -34,7 +33,7 @@ test {
     testLogging.showStandardStreams = true
 }
 
-apply plugin: 'maven'
+apply plugin: 'maven-publish'
 
 repositories {
     mavenCentral()
@@ -48,7 +47,7 @@ dependencies {
     implementation 'org.apache.xmlgraphics:xmlgraphics-commons:2.2'
     implementation 'com.romainpiel.svgtoandroid:svgtoandroid:0.1.0'
     testImplementation gradleTestKit()
-    testCompile 'junit:junit:4.12'
+    testImplementation 'junit:junit:4.12'
 }
 
 // Plugin publishing
